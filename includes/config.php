@@ -17,7 +17,7 @@ setlocale(LC_MONETARY, 'en_IN');
 $servername = "localhost";
 $username = "test";
 $password = "password";
-$dbname = "simplikart";
+$dbname = "rural_ecommerce";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

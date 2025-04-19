@@ -44,6 +44,15 @@
                     <span class="focus-input100" data-symbol="&#xf190;"></span>
                 </div>
 
+                <div class="wrap-input100 validate-input m-b-23">
+                    <span class="label-input100">Register as</span>
+                    <select class="input100" name="role" required>
+                        <option value="customer">Customer</option>
+                        <option value="seller">Seller</option>
+                    </select>
+                    <span class="focus-input100" data-symbol="&#xf0c0;"></span>
+                </div>
+
                 <small class="form-text text-muted text-center mt-3">
                     Already have an account? <a href="login.php">Login here</a>
                 </small>
@@ -74,4 +83,4 @@
 <script src="login/js/main.js"></script>
 
 </body>
-</html> 
+</html>

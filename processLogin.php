@@ -12,13 +12,18 @@ if ($numRows > 0)
     for ($i = 0; $i < $numRows; $i++)
     {
         $row = mysqli_fetch_assoc($result);
-        if ($row['email'] == $email && $row['password'] == $password)
-        {
-            // break;
+        if ($row['email'] == $email && $row['password'] == $password) {
             $_SESSION['passLogin'] = 'true';
             $_SESSION['user'] = $row['name'];
             $_SESSION['userId'] = $row['userId'];
-            header("Location: index.php");
+            $_SESSION['role'] = $row['role'];
+
+            if ($row['role'] == 'seller') {
+                $_SESSION['seller_id'] = $row['userId']; // Set seller_id for sellers
+                header("Location: sellerDashboard.php");
+            } else {
+                header("Location: index.php");
+            }
             exit();
         }
     }

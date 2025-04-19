@@ -72,18 +72,11 @@ include("includes/config.php");
 								<div class="col-sm-4">
 									 <select class="form-control" name="type" id="typeFilter">
 										<option value="">Type</option>
-										<?php
-										$sql = "SELECT DISTINCT type FROM `products`";
-										$result = mysqli_query($conn, $sql);
-										$num_rows = mysqli_num_rows($result);
-
-										while($row = mysqli_fetch_assoc($result)) {
-											$selected = ($filterType == $row['type']) ? 'selected' : '';
-											?>
-											<option value="<?=$row['type']?>" <?=$selected?>><?=ucwords($row['type'])?></option>
-											<?php
-										}
-										?>
+										<option value="handicrafts">Handicrafts</option>
+										<option value="fresh-produce">Fresh Produce</option>
+										<option value="livestock">Livestock</option>
+										<option value="tools">Tools</option>
+										<option value="clothing">Clothing</option>
 									</select>
 								</div>
 								<div class="col-sm-4">
